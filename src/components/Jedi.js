@@ -58,7 +58,7 @@ return (
           Eye: {eye} <br/>
           Gender: {gender}<br/>
           Skin Color: {skin}<br/>
-          Height: {(jedih/30.48).toFixed(1)} (in) <br/>
+          Height: {(jedih/30.48).toFixed(1)} (ft) <br/>
           Birth Year : {birthYear}<br/>
         </Typography>
       </CardContent>
