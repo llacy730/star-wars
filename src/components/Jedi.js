@@ -11,13 +11,19 @@ import Typography from '@mui/material/Typography';
 const Jedi = () => {
     useEffect (() => {
         getJedi();
-    }, []);
+        
+        
+    },
+     []);
 const [jedi,setJedi] = useState ("")
 const [jedih,setJediH] = useState ("")
 const [eye,setEye] = useState ("")
 const [gender,setGender] = useState("")
 const [skin, setSkin] = useState ("")
 const [birthYear, setbirthYear] = useState("")
+
+
+
 
 const getJedi = () => {
 axios.get('https://swapi.dev/api/people/1')
@@ -30,8 +36,12 @@ axios.get('https://swapi.dev/api/people/1')
     setbirthYear(response.data.birth_year)
 }
 
+
+
 );
 };
+
+
 return (
 <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -48,7 +58,7 @@ return (
           Eye: {eye} <br/>
           Gender: {gender}<br/>
           Skin Color: {skin}<br/>
-          Height: {jedih} (cm) <br/>
+          Height: {(jedih/30.48).toFixed(1)} (in) <br/>
           Birth Year : {birthYear}<br/>
         </Typography>
       </CardContent>
